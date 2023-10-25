@@ -54,28 +54,62 @@ public class ArrayStack<T> {
 
     public static void main(String[] args) {
         ArrayStack<Integer> array1 = new ArrayStack<>();
-        array1.push(111);
-        array1.push(111);
-        array1.push(111);
-        array1.push(22);
-        array1.push(44);
+
+        array1.push(12);
+        array1.push(12);
+        array1.push(122);
+        array1.push(12);
+
+        System.out.println(array1.PrintElements());
 
 
-       array1.PrintElements();
+        ArrayStack<Integer> Array2 = new ArrayStack<>();
+        Array2.push(33);
+        Array2.push(12);
+        Array2.push(12);
+        Array2.push(12);
+
+        System.out.println(Array2.PrintElements());
+
+        ArrayStack<Integer> Result = new ArrayStack<>();
+
+        if(array1.Size() == Array2.Size()){
+            int size = array1.Size();
+            for(int i = 0;i <size; i++){
+                Result.push(array1.pop() + Array2.pop());
+
+
+            }
+
+        }else{
+            System.out.println("result is not same shit");
+
+
+
+
+        }
+
+        System.out.println("result is " +  Result.PrintElements());
+
+
+
 
     }
 
-    public void PrintElements() {
-        StringBuilder  Sb = new  StringBuilder();
+    public StringBuffer PrintElements() {
+        StringBuffer  Sb = new StringBuffer();
+
 
         for(int i = top - 1; i >= 0 ; i --){
             Sb.append(Stack[i]);
             if(i > 0){
                 Sb.append(",");
             }
+
         }
 
-        System.out.println(Sb.toString());
+        return  Sb;
+
 
     }
 }
