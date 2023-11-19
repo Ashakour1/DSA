@@ -5,6 +5,9 @@ public class StackOne {
 
         Stack<Integer> Stack1 = new Stack<>();
 
+
+        System.out.println(Stack1);
+
         //ading numbers
         Stack1.push(10);
         Stack1.push(111);
