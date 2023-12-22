@@ -1,3 +1,5 @@
+package ArrayStack;
+
 import java.util.Arrays;
 
 public class ArrayStack<T> {
